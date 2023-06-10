@@ -8,6 +8,10 @@
     font-size: 24px;
 }
 
+.link--highlight {
+    color: red;
+}
+
 /* .logo {} */
 
 .side-bar {
