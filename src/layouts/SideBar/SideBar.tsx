@@ -9,6 +9,7 @@ import {
   selectSideBarLink,
   trending,
 } from "../../redux/sidebar/sidebarSlice";
+import logo from "../../assets/flow-logo.svg";
 import "./SideBar.css";
 
 const SideBar = () => {
@@ -17,10 +18,13 @@ const SideBar = () => {
 
   return (
     <nav className="side-bar">
+      {/* Logo */}
       <div className="side-bar__logo">
-        <h1 className="logo">Logo</h1>
+        <img src={logo} alt="" className="logo" />
       </div>
+      {/* Links */}
       <div className="side-bar__links">
+        {/* Home Link */}
         <NavLink
           to="/"
           className={`link ${
@@ -31,6 +35,7 @@ const SideBar = () => {
           <AiFillHome />
           Home
         </NavLink>
+        {/* Browse Link */}
         <NavLink
           to="/browse"
           className={`link ${
@@ -41,6 +46,7 @@ const SideBar = () => {
           <FaMusic />
           Browse
         </NavLink>
+        {/* Trending Link */}
         <NavLink
           to="/trending"
           className={`link ${
