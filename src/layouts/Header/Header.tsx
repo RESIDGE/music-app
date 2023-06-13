@@ -13,8 +13,8 @@ const Header = () => {
         <input type="text" className="search-bar__input" placeholder="Search" />
       </div>
       {/* Light/Dark Mode Button */}
-      <label className="switch">
-        <input type="checkbox" className="switch__input" />
+      <label className="switch" htmlFor="checkbox">
+        <input type="checkbox" id="checkbox" className="switch__input" />
         <span className="switch__slider switch__slider--round"></span>
       </label>
     </header>

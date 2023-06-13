@@ -53,7 +53,7 @@
 }
 
 .switch__input:checked+.switch__slider {
-    background-color: #2b2b2b;
+    background-color: red;
 }
 
 .switch__input:focus+.switch__slider {

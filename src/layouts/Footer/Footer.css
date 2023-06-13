@@ -1,5 +1,46 @@
 .footer {
+    align-items: center;
     bottom: 0;
+    border-top: 1px solid gainsboro;
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+    justify-content: space-between;
     left: 0;
     right: 0;
+    width: 100%;
+}
+
+.left-container {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 20%;
+}
+
+.middle-container {
+    height: 100%;
+    width: 50%;
+}
+
+.right-container {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 20%;
+}
+
+.track-utility-button {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 25px 10px;
+    width: auto;
+}
+
+.track-utility-button:active {
+    color: red;
 }
