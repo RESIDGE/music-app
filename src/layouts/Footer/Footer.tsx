@@ -19,17 +19,22 @@ const Footer = () => {
       {/* Middle Container */}
       <div className="middle-container">
         {/* Middle-Top Container */}
-        <div>
+        <div className="middle-top-container">
           {/* Track Title */}
-          Title
+          <span>Title</span>
           {/* Track Artist(s) */}
-          Artists
+          <span>-</span>
+          <span>Artist(s)</span>
         </div>
         {/* Middle-Bottom Container */}
-        <div>
+        <div className="middle-bottom-container">
+          {/* Current Track Timestamp */}
+          <span>00:00</span>
+          {/* Slider */}
+          <Slider sx={{ color: "red" }} defaultValue={0} />
           {/* Duration Time */}
           {/* Total Track Time (30 seconds globally for all track previews) */}
-          Duration Slider
+          <span>00:30</span>
         </div>
       </div>
       {/* Right Container */}
@@ -37,12 +42,7 @@ const Footer = () => {
         {/* Queue Button */}
         <HiOutlineViewList className="track-utility-button" />
         {/* Volume Controller */}
-        <Stack
-          alignItems="center"
-          direction="row"
-          spacing={2}
-          sx={{ flex: 1, pr: 1 }}
-        >
+        <Stack alignItems="center" direction="row" spacing={2} sx={{ flex: 1 }}>
           <VolumeDown />
           <Slider sx={{ color: "red" }} />
           <VolumeUp />
