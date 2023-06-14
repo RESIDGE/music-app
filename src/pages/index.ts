@@ -1,6 +1,6 @@
 import Browse from "./browse/Browse";
 import Genre from "./genre/Genre";
-import Home from "./home/Home";
+import Radio from "./radio/Radio";
 import Trending from "./trending/Trending";
 
-export { Browse, Genre, Home, Trending };
+export { Browse, Genre, Radio, Trending };

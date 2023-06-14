@@ -1,16 +1,16 @@
 import { Routes, Route } from "react-router-dom";
-import { Browse, Genre, Home, Trending } from "../pages/index";
+import { Browse, Genre, Radio, Trending } from "../pages/index";
 
 const AppRoutes = () => {
   return (
     <>
       <Routes>
-        {/* Home Component */}
-        <Route path="/" element={<Home />} />
         {/* Browse Component (genre selector) */}
-        <Route path="/browse" element={<Browse />} />
+        <Route path="/" element={<Browse />} />
         {/* Genre Component (:name = genre name) */}
         <Route path="/genre/:name" element={<Genre />} />
+        {/* Radio Component */}
+        <Route path="/radio" element={<Radio />} />
         {/* Trending Component (top 10 for albums, artists, and tracks) */}
         <Route path="/trending" element={<Trending />} />
       </Routes>

@@ -1,11 +1,10 @@
-import { AiFillHome } from "react-icons/ai";
-import { BiTrendingUp } from "react-icons/bi";
+import { BiRadio, BiTrendingUp } from "react-icons/bi";
 import { FaMusic } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import { useAppSelector, useAppDispatch } from "../../redux/hooks";
 import {
   browse,
-  home,
+  radio,
   selectSideBarLink,
   trending,
 } from "../../redux/sidebar/sidebarSlice";
@@ -24,20 +23,9 @@ const SideBar = () => {
       </div>
       {/* Links */}
       <div className="side-bar__links">
-        {/* Home Link */}
-        <NavLink
-          to="/"
-          className={`link ${
-            linkSelection === "home" ? "link--highlight" : ""
-          }`}
-          onClick={() => dispatch(home())}
-        >
-          <AiFillHome />
-          Home
-        </NavLink>
         {/* Browse Link */}
         <NavLink
-          to="/browse"
+          to="/"
           className={`link ${
             linkSelection === "browse" ? "link--highlight" : ""
           }`}
@@ -45,6 +33,17 @@ const SideBar = () => {
         >
           <FaMusic />
           Browse
+        </NavLink>
+        {/* Radio Link */}
+        <NavLink
+          to="/radio"
+          className={`link ${
+            linkSelection === "radio" ? "link--highlight" : ""
+          }`}
+          onClick={() => dispatch(radio())}
+        >
+          <BiRadio />
+          Radio
         </NavLink>
         {/* Trending Link */}
         <NavLink

@@ -18,8 +18,8 @@ export const sideBarSlice = createSlice({
     browse: (state) => {
       state.value = "browse";
     },
-    home: (state) => {
-      state.value = "home";
+    radio: (state) => {
+      state.value = "radio";
     },
     trending: (state) => {
       state.value = "trending";
@@ -27,6 +27,6 @@ export const sideBarSlice = createSlice({
   },
 });
 
-export const { browse, home, trending } = sideBarSlice.actions;
+export const { browse, radio, trending } = sideBarSlice.actions;
 export const selectSideBarLink = (state: RootState) => state.sideBar.value;
 export default sideBarSlice.reducer;
