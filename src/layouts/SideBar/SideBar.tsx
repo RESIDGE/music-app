@@ -7,7 +7,7 @@ import {
   radio,
   selectSideBarLink,
   trending,
-} from "../../redux/sidebar/sidebarSlice";
+} from "../../redux/sidebar/sideBarSlice";
 import logo from "../../assets/flow-logo.svg";
 import "./SideBar.css";
 
