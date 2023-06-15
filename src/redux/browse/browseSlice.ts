@@ -5,9 +5,7 @@ import axios from "axios";
 // Fetching genres using createAsyncThunk
 export const fetchGenres = createAsyncThunk("browse/fetchGenres", async () => {
   try {
-    const response = await axios.get(
-      "https://proxy-server-delta.vercel.app/genre"
-    );
+    const response = await axios.get(`${import.meta.env.VITE_URI}/genre`);
     return await response.data;
   } catch (error) {
     console.log(error);

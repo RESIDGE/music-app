@@ -3,6 +3,7 @@
     flex-direction: column;
     height: 100vh;
     margin: 0;
+    width: 100%;
 }
 
 .top-container {
@@ -10,6 +11,7 @@
     flex-direction: row;
     flex-grow: 1;
     height: 90%;
+    width: 100%;
 }
 
 .top-right-container {
@@ -17,4 +19,6 @@
     flex-direction: column;
     flex-grow: 1;
     height: 100%;
+    overflow: hidden;
+    width: 90%;
 }

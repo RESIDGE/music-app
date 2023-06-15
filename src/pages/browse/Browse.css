@@ -1,9 +1,42 @@
 .browse-content {
+    align-items: center;
+    box-sizing: border-box;
+    display: grid;
+    gap: 10px;
+    grid-auto-rows: minmax(300px, auto);
+    grid-template-columns: repeat(4, 1fr);
     height: 100%;
     overflow-y: scroll;
+    padding: 24px;
 }
 
-/* Scroll BAR */
+.genre {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.genre-image {
+    border-radius: 10%;
+    height: 100%;
+    width: auto;
+}
+
+.genre-title {
+    color: white;
+    font-size: 150%;
+    font-weight: bold;
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    text-shadow: 1px 1px 1px black;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Scroll Bar */
 /* width */
 ::-webkit-scrollbar {
     width: 10px;

@@ -8,7 +8,7 @@ const AppRoutes = () => {
         {/* Browse Component (genre selector) */}
         <Route path="/" element={<Browse />} />
         {/* Genre Component (:name = genre name) */}
-        <Route path="/genre/:name" element={<Genre />} />
+        <Route path="/genre/:genreId" element={<Genre />} />
         {/* Radio Component */}
         <Route path="/radio" element={<Radio />} />
         {/* Trending Component (top 10 for albums, artists, and tracks) */}
