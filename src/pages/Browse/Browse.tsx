@@ -16,7 +16,7 @@ const Browse = () => {
 
   return (
     <div className="browse-content">
-      {genresSelector.map((genre) => (
+      {genresSelector.map((genre: Record<string, string>) => (
         <div key={genre.id} className="genre">
           <NavLink to={`/genre/${genre.id}`}>
             <img src={genre.picture_medium} alt="" className="genre-image" />

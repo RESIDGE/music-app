@@ -14,7 +14,9 @@ const App = () => {
           {/* Search bar and appearance button (top of right container) */}
           <Header />
           {/* Main pages components (botton of right container)*/}
-          <AppRoutes />
+          <div className="main-content">
+            <AppRoutes />
+          </div>
         </div>
       </div>
       {/* Footer (south/bottom container) */}

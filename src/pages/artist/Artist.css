@@ -1,0 +1,40 @@
+.artist-banner {
+    align-items: center;
+    box-sizing: border-box;
+    column-gap: 20px;
+    display: flex;
+    flex-direction: row;
+    height: 30%;
+    width: 100%;
+}
+
+.artist-caption {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+}
+
+.artist-content {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+
+.artist-fan-count {
+    color: gray;
+    font-size: 80%;
+    width: 100%;
+}
+
+.artist-image {
+    border-radius: 100%;
+    height: 100%;
+    width: auto;
+}
+
+.artist-title {
+    font-size: 200%;
+    font-weight: bold;
+}

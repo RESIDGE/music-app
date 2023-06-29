@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
+import artistReducer from "./artist/artistSlice";
 import browseReducer from "./browse/browseSlice";
 import genreReducer from "./genre/genreSlice";
 import sideBarReducer from "./sidebar/sideBarSlice";
 
 export const store = configureStore({
   reducer: {
+    artist: artistReducer,
     browse: browseReducer,
     genre: genreReducer,
     sideBar: sideBarReducer,

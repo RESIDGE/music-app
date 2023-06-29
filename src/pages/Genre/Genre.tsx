@@ -28,9 +28,9 @@ const Genre = () => {
 
   return (
     <div className="genre-artists-content">
-      {genreArtistsSelector.map((artist) => (
+      {genreArtistsSelector.map((artist: Record<string, string>) => (
         <div key={artist.id} className="genre-artist">
-          <NavLink to={``} className="genre-artist-link">
+          <NavLink to={`/artist/${artist.id}`} className="genre-artist-link">
             <img
               src={artist.picture_medium}
               alt=""

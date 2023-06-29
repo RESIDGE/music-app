@@ -1,6 +1,6 @@
+import axios from "axios";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { RootState } from "../store";
-import axios from "axios";
 
 // Fetching genres using createAsyncThunk
 export const fetchGenres = createAsyncThunk("browse/fetchGenres", async () => {
