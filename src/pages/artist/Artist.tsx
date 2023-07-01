@@ -1,4 +1,9 @@
-import { useEffect } from "react";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
+import PopupState, { bindTrigger, bindMenu } from "material-ui-popup-state";
+import React, { useEffect } from "react";
+import { BiPlay, BiPause } from "react-icons/bi";
 import { NavLink, useNavigate, useParams } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import {
@@ -65,16 +70,37 @@ const Artist = () => {
       </div>
       {/* Artist Top 5 Tracks */}
       <div className="top-tracks">
-        <span>Top Tracks</span>
-        {topTracksSelector.map((track) => (
-          <div key={track.id} className="track">
-            <img src={track.album.cover_small} alt="" />
-            {track.title}
-          </div>
-        ))}
+        <h1>Top Tracks</h1>
+        <div className="tracks-container">
+          {topTracksSelector.map((track, index) => (
+            <div key={track.id} className="track">
+              <div className="track-left-container">
+                <BiPlay size={30} />
+                <img src={track.album.cover_small} alt="" />
+                <div className="track-desc">
+                  <span>{`${index + 1}. ${track.title}`}</span>
+                </div>
+              </div>
+              <PopupState variant="popover" popupId="demo-popup-menu">
+                {(popupState) => (
+                  <React.Fragment>
+                    <MoreHorizIcon {...bindTrigger(popupState)} />
+                    <Menu {...bindMenu(popupState)}>
+                      <MenuItem onClick={popupState.close}>
+                        Add to queue
+                      </MenuItem>
+                    </Menu>
+                  </React.Fragment>
+                )}
+              </PopupState>
+            </div>
+          ))}
+        </div>
       </div>
       {/* Artist's Albums */}
-      <div className="artist-albums"></div>
+      <div className="artist-albums">
+        <h1>Albums</h1>
+      </div>
       {/* Artist Playlists */}
       <div className="artist-playlists"></div>
       {/* Artist Radio */}

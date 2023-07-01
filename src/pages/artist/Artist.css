@@ -18,7 +18,10 @@
 
 .artist-content {
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
     height: 100%;
+    row-gap: 5vh;
     width: 100%;
 }
 
@@ -37,4 +40,49 @@
 .artist-title {
     font-size: 200%;
     font-weight: bold;
+}
+
+.top-tracks {
+    border-radius: 4px;
+    box-shadow: 0 0 6px rgba(25, 25, 34, .16);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    row-gap: 1vh;
+    width: 100%;
+}
+
+.track {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.tracks-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+}
+
+.track-desc {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+}
+
+.track-left-container {
+    align-items: center;
+    box-sizing: border-box;
+    column-gap: 1%;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+h1 {
+    margin: 0;
 }
